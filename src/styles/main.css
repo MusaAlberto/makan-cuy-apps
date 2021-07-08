@@ -1,0 +1,501 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+/*
+ * Skip To Content
+ */
+ 
+.skip-to-content {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background-color: navy;
+   	color: white;
+	padding: 8px;
+	z-index: 100;
+}
+
+.skip-to-content:focus {
+	top: 0;
+}
+
+.header {
+	background-color: black;
+	min-height: 56px;
+	transition: min-height 0.3s;
+}
+
+.header-inner {
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-title {
+	font-weight: 300;
+	font-size: 4em;
+	margin: 0.5em 0.25em;
+	display: inline-block;
+	color: white;
+}
+
+.header-menu {
+	font-size: 38px;
+	text-align: right;
+	margin: 10px auto;
+	display: block;
+	width: 44px;
+	text-decoration: none;
+	color: white;
+}
+
+/*
+AppBar
+*/
+
+.app-bar {
+	padding: 8px 16px;
+	background-color: black;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 10px;
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+	display: flex;
+	align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+	background-color: transparent;
+	border: none;
+	font-size: 18px;
+	padding: 8px;
+	cursor: pointer;
+	color: white;
+	min-width: 44px;
+	min-height: 44px;
+}
+
+.app-bar .app-bar__brand {
+	display: flex;
+	align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+	color: white;
+	font-size: 22px;
+	user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+	position: absolute;
+	top: 50px;
+	left: -180px; 
+	width: 150px;
+	transition: all 0.3s;
+	padding: 8px; 
+	background-color: black;
+	overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+	left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 8px;
+	margin-bottom: 5px;
+	width: 100%;
+	min-width: 44px;
+	min-height: 44px;
+}
+
+/*
+ * Top level navigation
+ */
+
+.nav {
+	width: 100%;
+	background-color: black;
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.nav-list {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+
+.nav-item {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #a2b29f;
+}
+
+/*
+ * Jumbotron
+ */
+
+.jumbotron {
+	display: flex;
+	width: 100%;
+	min-height: 400px;
+	background-image: url("../public/heroes/hero-image_2-large.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.jumbotron-content {
+	margin: 50px 75px;
+    max-width: 800px;
+}
+
+.jumbotron-title {
+	font-size: 46px;
+	color: #fff;
+}
+
+.jumbotron-tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/*
+ * main
+ */
+main {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*
+ * content
+ */
+
+ .content {
+    padding: 32px;
+}
+
+/*
+ * card
+ */
+
+.card {
+	display: grid;
+	grid-row-gap: 16px;
+}
+
+.card-item {
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+	padding: 15px;
+}
+
+.card-item:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-item-thumbnail {
+	width: 100%;
+	min-height: 150px;
+	max-height: 180px;
+	object-fit: cover;
+}
+
+.card-item-location {
+	font-size: 12px;
+}
+
+.card-item-rating {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #FFD700;
+}
+
+.card-item-title {
+	margin-top: 8px;
+	font-weight: bold;
+	font-size: 16px;
+	min-width: 44px;
+    min-height: 44px;
+}
+
+.card-item-title a {
+	display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.card-item-description {
+	margin-top: 8px;
+	font-size: 12px;
+	line-height: 1.5em;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/*
+   Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+  Restaurant Detail
+*/
+
+.restaurant-title {
+    width: 100%;
+    margin: 20px auto;
+	font-size: 24px;
+}
+
+.restaurant-poster {
+    width: 100%;
+    max-height: 450px;
+}
+
+.category {
+	display: inline-block; 
+	font-size: 12px;
+}
+
+.description-detail {
+	line-height: 1.5em;
+}
+
+.restaurant-details-menu {
+	display: grid;
+	font-size: 12px;
+}
+
+.location-detail {
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+.rating-detail {
+	margin: 5px 0;
+	font-size: 12px;
+	color: #FFD700;
+}
+
+.foods-menu {
+	margin: 5px 0;
+	line-height: 1.5em;
+}
+
+.drinks-menu {
+	margin: 5px 0;
+	line-height: 1.5em;
+}
+
+/* review */
+
+.review-card {
+	display: grid;
+	grid-row-gap: 16px;
+}
+
+.review-card-item {
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+	padding: 15px;
+}
+
+.restaurant-review {
+	font-size: 16px;
+	margin: 10px auto;
+}
+
+.name {
+	margin-top: 8px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/*
+ * footer
+ */
+
+footer {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+	background-color: black;
+	color: white;
+}
+
+/*
+ * responsive
+ */
+
+/* @media screen and (max-width: 499px) {
+	.nav {
+		z-index: 10;
+		background-color: #fff;
+		width: 300px;
+		position: absolute;
+		-webkit-transform: translate(-300px, 0);
+		transform: translate(-300px, 0);
+		transition: transform 0.3s ease;
+	}
+	.open {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	.nav-item {
+		display: list-item;
+		border-bottom: 1px solid #e0e0e0;
+		width: 100%;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.header-menu {
+		display: none;
+	}
+} */
+
+@media screen and (min-width: 650px) {
+	.app-bar {
+        grid-template-columns: 1fr auto;
+        padding: 8px 32px;
+    }
+   
+    .app-bar .app-bar__brand h1 {
+        font-size: 1.5em;
+    }
+   
+    .app-bar .app-bar__menu {
+        display: none;
+    }
+   
+    .app-bar .app-bar__navigation {
+        position: static;
+        width: 100%;
+    }
+   
+    .app-bar .app-bar__navigation ul li {
+        display: inline-block;
+    }
+   
+    .app-bar .app-bar__navigation ul li a {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: 0;
+		min-width: 44px;
+    	min-height: 44px;
+    }
+
+	.card-item-content {
+		padding: 16px 0;
+	}
+
+	.card-item-title {
+		font-size: 18px;
+	}
+
+	.card-item-description {
+		font-size: 14px;
+	}
+
+	.jumbotron {
+		background-image: url("../public/heroes/hero-image_2-small.jpg");
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+		grid-row-gap: 16px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+    .app-bar .app-bar__brand h1 {
+        font-size: 2em;
+    }
+  }
+
+@media screen and (min-width: 900px) {
+	.card {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	main {
+		max-width: 1200px;
+	}
+}
